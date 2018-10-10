@@ -4,6 +4,10 @@
 <head>
   <title>RPS Game</title>
   <!-- Link CSS here -->
+  <link href="https://fonts.googleapis.com/css?family=Sacramento|Yellowtail" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Jockey+One|Rock+Salt" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <link type='text/css' rel='stylesheet' href='css/style.css' />
 </head>
 
@@ -20,25 +24,27 @@
      -->
   <div class="row">
       <h1>Rock Paper Scissors</h1>
-      <img src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
+      <img src="http://wordpress.futurism.com/wp-content/uploads/2015/11/rock-paper-scissors.jpg">
 
       <h3>Please Submit Your Choice Below</h3>
       <div>
-        <input id="input">
-        <button id="shoot">Shoot!</button>
+        <input id="input" placeholder="Launch your action here"> 
+        <button> Rock Paper Scissor Shoot..</button>
       </div>
 
       <div id="choices" class="row">
         <div>
-          <h4>User Choice</h4>
+          <h4>Your Choice</h4>
           <p id="userChoice"></p>
         </div>
         <div>
-          <h4>Computer Choice</h4>
+          <h2>Computer Choice</h2>
           <p id="computerChoice"></p>
         </div>
       </div>
-      <div id="result"></div>
+      <div id="result">
+        <h3 id="winner">And the winner is...</h3>
+      </div>
   </div>
 
   <!-- Link JQuery here -->

@@ -4,6 +4,21 @@
 }
 #choices{
   display:flex;
-  justify-content:space-between;
+  justify-content:space-around;
   
+}
+h1{
+  font-family: 'Sacramento', cursive;
+}
+h3{
+  font-family: 'Yellowtail', cursive;
+}
+h2{
+  font-family: 'VT323', monospace;
+}
+h4{
+  font-family: 'Rock Salt', cursive;
+}
+#winner{
+  font-family: 'Jockey One', sans-serif;
 }
