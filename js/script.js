@@ -17,94 +17,120 @@ $(document).ready(function(){
        
    var winner;
        winner="";
-      
-      
-    
-       
-
+     
    
        
    $("button").click(function(){
-       userChoice= $("#input").val();
+       userChoice= $("#input").val().toLowerCase();
         var randomNumber=Math.random();
    
    if(randomNumber < .80 && randomNumber > .60){
-        $("#computerChoice").text("rock");
+       computerChoice="rock";
     }
     else if(randomNumber < .60 && randomNumber > .40){
-        $("#computerChoice").text("paper");
+        computerChoice="paper";
     }
     else {
-        $("#computerChoice").text("scissor");
+        computerChoice="scissor";
+        
     }
  
- $("#userChoice").text(userChoice);
-       
-       if (userChoice === "rock" && computerChoice === "rock"){
-    $("#winner").text("TIE!");
-}
-else if (userChoice === "paper" && computerChoice === "rock"){
-   $("#winner").text("YOU WIN!");
-}
-else if(userChoice === "scissor" && computerChoice === "rock"){
-   $("#winner").text("COMPUTER WINS!");
-}
- else if (userChoice === "paper" && computerChoice === "paper"){
-    $("#winner").text("TIE!");
-}
-else if (userChoice === "rock" && computerChoice === "paper"){
-   $("#winner").text("COMPUTER WINS!");
-}
-else if(userChoice === "scissor" && computerChoice === "paper"){
-   $("#winner").text("YOu WINS!");
-}
-else if (userChoice === "paper" && computerChoice === "scissor"){
-    $("#winner").text("COMPUTER WINS!");
-}
-else if (userChoice === "rock" && computerChoice === "scissor"){
-   $("#winner").text("YOU WIN!");
-}
-else if(userChoice === "scissor" && computerChoice === "scissor"){
-   $("#winner").text("TIE!");
-}
-else {
-    $("#winner").text("INVALID RESPONSE!");
-}
-       
+$("#userChoice").text(userChoice);
+$("#computerChoice").text(computerChoice);
+     
+       if ( (userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissor") && (userChoice !== "lizard") && (userChoice !== "spock")){
+   $("#resultWinner").text("Not Valid Input");
 
+           return;
+       }
        
        
+   if (userChoice === "rock"){ 
+       if (computerChoice === "rock"){
+           $("#resultWinner").text("TIE!");
+       }
+       else if(computerChoice === "paper"){
+           $("#resultWinner").text("Lose!");
+       }
+       else if(computerChoice === "scissor"){
+           $("#resultWinner").text("win!");
+       }
+       else if(computerChoice === "lizard"){
+           $("#resultWinner").text("win!");
+       }
+       else if(computerChoice === "spock"){
+           $("#resultWinner").text("Lose!");
+       }
+   }
+    
+   else if (userChoice === "paper"){ 
+       if (computerChoice === "rock"){
+           $("#resultWinner").text("Win!");
+       }
+       else if(computerChoice === "paper"){
+           $("#resultWinner").text("Tie!");
+       }
+       else if(computerChoice === "scissor"){
+           $("#resultWinner").text("Lose!");
+       }
+        else if(computerChoice === "lizard"){
+           $("#resultWinner").text("Lose!");
+       }
+       else if(computerChoice === "spock"){
+           $("#resultWinner").text("Win!");
+       }
        
-       
-       
-       
-       
-       
+   }
+   else if (userChoice === "scissor"){ 
+       if (computerChoice === "rock"){
+           $("#resultWinner").text("Lose!");
+       }
+       else if(computerChoice === "paper"){
+           $("#resultWinner").text("Win!");
+       }
+       else if(computerChoice === "scissor"){
+           $("#resultWinner").text("Tie!");
+       }
+        else if(computerChoice === "lizard"){
+           $("#resultWinner").text("win!");
+       }
+       else if(computerChoice === "spock"){
+           $("#resultWinner").text("Lose!");
+       }
+   }
+   else if (userChoice === "lizard"){ 
+       if (computerChoice === "rock"){
+           $("#resultWinner").text("Lose!");
+       }
+       else if(computerChoice === "paper"){
+           $("#resultWinner").text("Win!");
+       }
+       else if(computerChoice === "scissor"){
+           $("#resultWinner").text("Lose!");
+       }
+        else if(computerChoice === "lizard"){
+           $("#resultWinner").text("Tie!");
+       }
+       else if(computerChoice === "spock"){
+           $("#resultWinner").text("Win!");
+       }
+   }
+   else if (userChoice === "spock"){ 
+       if (computerChoice === "rock"){
+           $("#resultWinner").text("Win!");
+       }
+       else if(computerChoice === "paper"){
+           $("#resultWinner").text("Lose!");
+       }
+       else if(computerChoice === "scissor"){
+           $("#resultWinner").text("Win!");
+       }
+        else if(computerChoice === "lizard"){
+           $("#resultWinner").text("Lose!");
+       }
+       else if(computerChoice === "spock"){
+           $("#resultWinner").text("Tie!");
+       }
+   }
 });
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 });
